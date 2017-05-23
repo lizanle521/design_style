@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+
+interface Target
+class Adaptee
+class Adapter
+class Client
+
+Target <|.. Adapter
+Adaptee --* Adapter
+Client <-- Target
+
+@enduml

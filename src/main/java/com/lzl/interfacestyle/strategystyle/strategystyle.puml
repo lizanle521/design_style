@@ -1,0 +1,39 @@
+@startuml
+
+class Client
+interface Strategy
+class AStrategy
+class BStrategy
+class CStrategy
+class AlgrothrimA
+class AlgrothrimB
+class AlgrothrimC
+
+Client <.. Strategy
+Strategy <|.. AStrategy
+Strategy <|.. BStrategy
+Strategy <|.. CStrategy
+
+AStrategy <.. AlgrothrimA
+BStrategy <.. AlgrothrimB
+CStrategy <.. AlgrothrimC
+
+interface Strategy {
+    + recommended():Result
+}
+
+class AStrategy {
+    # AlgrothrimA algro
+    + recommended():Result
+}
+
+class BStrategy {
+    # AlgrothrimB algro
+    + recommended():Result
+}
+
+class CStrategy {
+    # AlgrothrimC algro
+    + recommended():Result
+}
+@enduml

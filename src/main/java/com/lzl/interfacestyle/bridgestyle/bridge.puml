@@ -1,0 +1,16 @@
+@startuml
+
+left to right direction
+class Client
+abstract class DriverManager
+class MyDriverManager
+interface Driver
+class MysqlDriver
+class OracleDriver
+
+Client <-- DriverManager
+DriverManager <|.. MyDriverManager
+DriverManager <-- Driver
+Driver <|.. MysqlDriver
+Driver <|.. OracleDriver
+@enduml

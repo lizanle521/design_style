@@ -1,0 +1,40 @@
+@startuml
+top to bottom direction
+
+class Client
+Class Handler
+class AHandler
+class BHandler
+class CHandler
+
+Client <-- Handler
+Handler <|-- AHandler
+Handler <|-- BHandler
+Handler <|-- CHandler
+
+Handler o-- Handler
+
+
+class Handler {
+  # Handler handler
+  + getSuccessor():Handler
+  + setSuccessor():void
+  + handleRequest():void
+}
+
+class AHandler {
+  # Handler handler
+  + handleRequest():void
+}
+
+class BHandler {
+  # Handler handler
+  + handleRequest():void
+}
+
+class CHandler {
+  # Handler handler
+  + handleRequest():void
+}
+
+@enduml
